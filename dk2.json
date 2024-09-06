@@ -1,0 +1,152 @@
+[
+    {
+        "id": 0,
+        "building": "DK2",
+        "room": "201",
+        "available": "Unavailable",
+        "available_vn": "Đã hết",
+        "price": "8,000,000 VND",
+        "area": "40 m²",
+        "item1": "1 Bed",
+        "item1_vn": "1 Giường",
+        "item2": "1 Bath",
+        "item2_vn": "1 Bồn tắm",
+        "item3": "Balcony",
+        "item3_vn": "Ban công",
+        "images": [
+            "img/DK2/201/201_overview.jpeg",
+            "img/DK2/201/201_kitchen.jpeg",
+            "img/DK2/201/201_bed.jpeg",
+            "img/DK2/201/201_bath.jpeg"
+        ]
+    },
+    {
+        "id": 1,
+        "building": "DK2",
+        "room": "202",
+        "available": "Available",
+        "available_vn": "Còn trống",
+        "price": "7,000,000 VND",
+        "area": "32 m²",
+        "item1": "1 Bed",
+        "item1_vn": "1 Giường",
+        "item2": "1 Shower",
+        "item2_vn": "1 Buồng tắm",
+        "item3": "Loggia",
+        "item3_vn": "Lô gia",
+        "images": [
+            "img/DK2/202/202_overview.jpg",
+            "img/DK2/202/202_kitchen.JPG",
+            "img/DK2/202/202_bed.jpeg",
+            "img/DK2/202/202_bath.JPG"
+        ]
+    },
+    {
+        "id": 2,
+        "building": "DK2",
+        "room": "301",
+        "available": "Available",
+        "available_vn": "Còn trống",
+        "price": "8,000,000 VND",
+        "area": "35 m²",
+        "item1": "1 Bed",
+        "item1_vn": "1 Giường",
+        "item2": "1 Shower",
+        "item2_vn": "1 Buồng tắm",
+        "item3": "Loggia",
+        "item3_vn": "Lô gia",
+        "images": [
+            "img/DK2/301/301_overview.jpg",
+            "img/DK2/301/301_kitchen.JPG",
+            "img/DK2/301/301_bath.JPG"
+        ]
+    },
+    {
+        "id": 3,
+        "building": "DK2",
+        "room": "302",
+        "available": "Available",
+        "available_vn": "Còn trống",
+        "price": "7,000,000 VND",
+        "area": "32 m²",
+        "item1": "1 Bed",
+        "item1_vn": "1 Giường",
+        "item2": "1 Shower",
+        "item2_vn": "1 Buồng tắm",
+        "item3": "Loggia",
+        "item3_vn": "Lô gia",
+        "images": [
+            "img/DK2/302/302_overview.JPG",
+            "img/DK2/302/302_kitchen.JPG",
+            "img/DK2/302/302_bed.jpeg",
+            "img/DK2/302/302_bath.JPG"
+        ]
+    },
+    {
+        "id": 4,
+        "building": "DK2",
+        "room": "401",
+        "available": "Available",
+        "available_vn": "Còn trống",
+        "price": "8,000,000 VND",
+        "area": "40 m²",
+        "item1": "1 Bed",
+        "item1_vn": "1 Giường",
+        "item2": "1 Bath",
+        "item2_vn": "1 Bồn tắm",
+        "item3": "Loggia",
+        "item3_vn": "Lô gia",
+        "images": [
+            "img/DK2/401/401_overview.jpeg",
+            "img/DK2/401/401_1.jpeg",
+            "img/DK2/401/401_2.jpeg",
+            "img/DK2/401/401_3.jpeg",
+            "img/DK2/401/401_4.jpeg",
+            "img/DK2/401/401_5.jpeg"
+        ]
+    },
+    {
+        "id": 5,
+        "building": "DK2",
+        "room": "402",
+        "available": "Available",
+        "available_vn": "Còn trống",
+        "price": "7,000,000 VND",
+        "area": "32 m²",
+        "item1": "1 Bed",
+        "item1_vn": "1 Giường",
+        "item2": "1 Shower",
+        "item2_vn": "1 Buồng tắm",
+        "item3": "Loggia",
+        "item3_vn": "Lô gia",
+        "images": [
+            "img/DK2/402/402_overview.jpeg",
+            "img/DK2/402/402_kitchen.JPG",
+            "img/DK2/402/402_bed.jpeg",
+            "img/DK2/402/402_bath.jpeg"
+        ]
+    },
+    {
+        "id": 6,
+        "building": "DK2",
+        "room": "501",
+        "available": "Unavailable",
+        "available_vn": "Đã hết",
+        "price": "11,000,000 VND",
+        "area": "60 m²",
+        "item1": "2 Beds",
+        "item1_vn": "2 Giường",
+        "item2": "2 Showers",
+        "item2_vn": "2 Buồng tắm",
+        "item3": "Balcony",
+        "item3_vn": "Ban công",
+        "images": [
+            "img/DK2/501/501_overview.jpeg",
+            "img/DK2/501/501_kitchen.jpeg",
+            "img/DK2/501/501_living.jpeg",
+            "img/DK2/501/501_bed_1.jpeg",
+            "img/DK2/501/501_bed_2.jpeg",
+            "img/DK2/501/501_bath.JPG"
+        ]
+    }
+]
