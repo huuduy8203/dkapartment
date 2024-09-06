@@ -152,28 +152,35 @@
     <script>
         // Function to get query parameters
         function getQueryParams() {
-            const params = {};
-            const queryString = window.location.search.substring(1);
-            const paramArray = queryString.split('&');
-            paramArray.forEach(param => {
-                const [key, value] = param.split('=');
-                params[key] = decodeURIComponent(value);
-            });
-            return params;
+            const urlParams = new URLSearchParams(window.location.search);
+            const building = urlParams.get('building');
+            const room = urlParams.get('room');
+            return { building, room };
         }
 
-        // Fetch room data based on room number from the query parameter
+        // Fetch room data based on building and room number from the query parameter
         async function loadRoomDetails() {
             const params = getQueryParams();
+            const building = params.building; // e.g., "DK1" or "DK2"
             const roomNumber = params.room; // e.g., "402"
-            
-            const dk1Response = await fetch('dk1.json');
-            const dk2Response = await fetch('dk2.json');
-            const dk1Rooms = await dk1Response.json();
-            const dk2Rooms = await dk2Response.json();
 
-            const allRooms = [...dk1Rooms, ...dk2Rooms];
-            const roomData = allRooms.find(room => room.room === roomNumber);
+            let rooms;
+            
+            // Fetch data based on the building type (DK1 or DK2)
+            if (building === 'DK1') {
+                const response = await fetch('dk1.json');
+                rooms = await response.json();
+            } else if (building === 'DK2') {
+                const response = await fetch('dk2.json');
+                rooms = await response.json();
+            } else {
+                // Handle invalid building type
+                document.getElementById('room-detail-container').innerHTML = '<p>Invalid building specified.</p>';
+                return;
+            }
+
+            // Find the room based on the room number
+            const roomData = rooms.find(room => room.room === roomNumber);
 
             if (roomData) {
                 // Inject room details into the HTML
@@ -186,22 +193,23 @@
                             <h1 class="display-5 animated fadeIn mb-4 text-primary">${roomData.price}</h1>
                             <ul class="animated fadeIn pb-2">
                                 <li><i class="fa fa-ruler-combined text-primary me-2"></i>${roomData.area}</li>
-                                <li><i class="fa fa-bed text-primary me-2"></i>${roomData.item1}</li>
-                                <li><i class="fa fa-shower text-primary me-2"></i>${roomData.item2}</li>
-                                <li><i class="fa fa-share-alt-square text-primary me-2"></i>${roomData.item3}</li>
+                                <li><i class="fa fa-bed text-primary me-2"></i>${roomData.item1_vn}</li>
+                                <li><i class="fa fa-shower text-primary me-2"></i>${roomData.item2_vn}</li>
+                                <li><i class="fa fa-share-alt-square text-primary me-2"></i>${roomData.item3_vn}</li>
                             </ul>
                         </div>
                         <div class="col-md-6 animated fadeIn">
                             <div class="owl-carousel header-carousel">
                                 ${roomData.images.map(image => `
                                     <div class="owl-carousel-item">
-                                        <img class="img-fluid" src="${image}" alt="">
+                                        <img class="img-fluid" src="${image}" alt="Room ${roomData.room}">
                                     </div>
                                 `).join('')}
                             </div>
                         </div>
                     </div>
                 `;
+
                 // Initialize carousel
                 $('.header-carousel').owlCarousel({
                     autoplay: true,
@@ -223,6 +231,7 @@
 
         // Load room details when the page is ready
         document.addEventListener('DOMContentLoaded', loadRoomDetails);
+
     </script>
 
     <!-- Template Javascript -->
